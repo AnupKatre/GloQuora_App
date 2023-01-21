@@ -76,7 +76,7 @@ public class ServiceImpl implements UserService {
                 user.setName(inputUser.getName());
             }
             if ((inputUser.getUserName() != null)) {
-                user.setUsername(inputUser.getUserName());
+                user.setUserName(inputUser.getUserName());
             }
             if ((inputUser.getEmail() != null)) {
                 user.setEmail(inputUser.getEmail());

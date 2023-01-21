@@ -18,19 +18,19 @@ public class User {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    String Name;
-    String Username;
-    String Email;
+    String name;
+    String userName;
+    String email;
 
-//    @OneToOne(cascade = {CascadeType.ALL})
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
-    Address address;
+    //    @OneToOne(cascade = {CascadeType.ALL})
+    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "address_id", referencedColumnName = "id")
+            Address address;
     String phone;
-//    @OneToOne(cascade = {CascadeType.ALL})
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    //    @OneToOne(cascade = {CascadeType.ALL})
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     Company company;
-
 
 
 }

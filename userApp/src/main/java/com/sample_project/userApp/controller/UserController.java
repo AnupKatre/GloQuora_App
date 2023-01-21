@@ -5,7 +5,6 @@ import com.sample_project.userApp.dto.UserDto;
 import com.sample_project.userApp.model.User;
 import com.sample_project.userApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,12 +47,5 @@ public class UserController {
         return new ResponseEntity<User>(service.updateUser(id,user),HttpStatus.ACCEPTED);
 
     }
-
-
-
-
-
-
-
 
 }

@@ -19,6 +19,6 @@ public class Company {
     String name;
     String location;
 
-    @OneToOne
-    User user;
+//    @OneToOne
+//    User user;
 }

@@ -20,11 +20,11 @@ public class Address {
     String street;
     String city;
     //    @OneToOne(cascade = {CascadeType.ALL},mappedBy = "address")
-    @OneToOne(mappedBy = "address",cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     Geo geo;
 
-    @OneToOne
-    User user;
+//    @OneToOne
+//    User user;
 
 
 }

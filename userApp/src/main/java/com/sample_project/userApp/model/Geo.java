@@ -20,6 +20,6 @@ public class Geo {
     String longitude;
     String latitude;
 
-    @OneToOne
-    Address address;
+//    @OneToOne
+//    Address address;
 }

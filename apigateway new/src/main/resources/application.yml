@@ -8,15 +8,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: GLO_QUORA
+        - id: gloQuora
           uri:
-            lb://GLO_QUORA
+            lb://gloQuora
           predicates:
-            - Path=/userspost/**
+            - Path=/GloQuora/**
 
 
-        - id: USER-SERVICE
+        - id: User
           uri:
-            lb://USER-SERVICE
+            lb://User
           predicates:
             - Path=/User/**
+
