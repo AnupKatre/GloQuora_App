@@ -6,6 +6,8 @@ import com.sample_project.GloQuora.repository.GloRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,13 +29,18 @@ public class GloServiceImpl implements GloService {
     }
 
     @Override
-    public GloQuoraPost getPostById(String id) {
+    public List<GloQuoraPost> getPostByUserId(Long id) {
+        List<GloQuoraPost> result = new ArrayList<GloQuoraPost>();
+
         try {
-            return repository.findById(id).get();
+            if(!repository.existsByUserId(id)){
+                return null;
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return null;
+
+        return repository.findByUserId(id);
     }
 
     @Override

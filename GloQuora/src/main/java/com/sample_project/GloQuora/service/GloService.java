@@ -9,7 +9,7 @@ public interface GloService {
 
     List<GloQuoraPost> showAll();
 
-    GloQuoraPost getPostById(String id);
+    List<GloQuoraPost> getPostByUserId(Long id);
 
     String addPost(GloQuoraPostDto post);
 

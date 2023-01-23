@@ -24,8 +24,8 @@ public class GloController {
     }
 
     @GetMapping("/getPost/{id}")
-    public ResponseEntity<GloQuoraPost> getGloQuora_PostById(@PathVariable("id") String id) {
-        return new ResponseEntity<GloQuoraPost>(service.getPostById(id), HttpStatus.OK);
+    public ResponseEntity<List<GloQuoraPost>> getGloQuora_PostById(@PathVariable("id") Long id) {
+        return new ResponseEntity<List<GloQuoraPost>>(service.getPostByUserId(id), HttpStatus.OK);
     }
 
     @PostMapping("/addPost")
